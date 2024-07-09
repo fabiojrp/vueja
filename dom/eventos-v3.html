@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js App</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>    
+    <div id="app">
+        <input type="text" id="valor" value="1">
+        <p v-on:mousemove="somar()" >{{soma}}</p>        
+    </div>
+
+    <script>
+        // Your Vue.js code goes here
+        new Vue({
+            el: '#app',
+            data: {
+                soma: 0,                
+            },
+            methods: {
+                somar(){
+                    this.soma += parseInt(valor.value);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

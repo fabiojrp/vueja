@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js App</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        Texto
+        <input type="text" v-on:keyup.enter="digitou()">
+    </div>
+
+    <script>
+        // Your Vue.js code goes here
+        new Vue({
+            el: '#app',
+            data: {
+                
+            },
+            methods: {
+                digitou(){
+                    alert('Digitou');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
