@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        <h4 v-once>{{ titulo }}</h4>
+        <p>{{ ola() }}</p>
+        <a v-bind:href="url">Google</a>
+        <p v-html="url2"></p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                titulo: 'Olá, Vue.js!',
+                url: 'https://www.google.com',
+                url2: '<a href="http://www.uol.com.br">UOL</a>'
+            },
+            methods:{
+                ola(){
+                    this.titulo = 'Olá, mundo!';
+                    return this.titulo;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
