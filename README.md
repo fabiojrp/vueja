@@ -1,2 +1,1 @@
-# vueja
-Estudos sobre VueJS
+## Estudos sobre VueJS
