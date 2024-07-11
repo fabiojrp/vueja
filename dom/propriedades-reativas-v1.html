@@ -1,0 +1,35 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <button v-on:click="aumentar()">Aumentar</button>
+    <button v-on:click="cont2++">Aumentar 2</button>
+    <button v-on:click="diminuir()">Diminuir</button>
+    <p>Valor: {{ contador }}</p>
+    <p>Valor 2: {{ cont2 }}</p>
+    <p>{{ resultado }}</p>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            contador: 0,
+            cont2: 0,
+            resultado: ''
+        },
+        methods:{
+            aumentar(){
+                this.contador++
+                this.imprimirResultado()
+            },
+            diminuir(){
+                this.contador--    
+                this.imprimirResultado()            
+            },
+            imprimirResultado(){                
+                this.resultado = this.contador >= 3 ? 'Maior ou igual a 3' : 'Menor que 3'
+            }
+
+        }
+    })
+</script>
