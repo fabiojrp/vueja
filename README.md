@@ -17,5 +17,3 @@
 ### Propriedades reativas
 - **computed**: permite que uma função seja chamada como um atributo (sem '()') somente quando necessário
 - **watch**: faz atualização assíncrona quando uma variável é modificada
-
-### Aula de hoje
